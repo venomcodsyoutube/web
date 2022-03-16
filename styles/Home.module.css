@@ -77,6 +77,26 @@
   padding:1rem;;
 }
 
+.infolist {
+  margin-top: 1rem;
+}
+
+.infolist  li {
+  margin-left: 4rem;
+}
+.infolist  li a {
+  color:blue;
+}
+.infolist  li a:hover {
+  text-decoration: underline;
+}
+
+.infoImg {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 @media (max-width: 600px) {
   .grid {
