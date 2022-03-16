@@ -8,7 +8,7 @@ import {
 import React from 'react'
 import emailjs from "emailjs-com"
 import styles from '../styles/Home.module.css';
-import Success from './components/Success'
+import swal from 'sweetalert'
 import Head from 'next/head'
 import { Button } from '@chakra-ui/button'
 
@@ -18,14 +18,12 @@ const contact = () => {
 
         emailjs.sendForm('service_e2dajuo', 'template_33ycncq', e.target, 'rEAdyNUwtD3tW3eow')
             .then((result) => {
-                push('<Success />);
+                console.log(result.text);
+                swal("Message Sent!", "Will get back to you in sometime..", "success");
             }, (error) => {
                 console.log(error.text);
             });
             e.target.reset();
-      return (
-          <Success />
-          )
     }
 
     return (
