@@ -39,7 +39,7 @@ const contact = () => {
 
                 <Box mt="-4rem">
                     <form action="https://formspree.io/f/xoqrwggo"
-                        method="POST" onSubmit={sendEmail} className={styles.form}>
+                        method="post" onSubmit={sendEmail} className={styles.form}>
                         <FormControl isRequired >
                             <FormLabel htmlFor='name'>Name</FormLabel>
                             <Input name="name" id='name' placeholder='Name' />
