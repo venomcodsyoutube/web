@@ -18,7 +18,7 @@ const contact = () => {
 
         emailjs.sendForm('service_e2dajuo', 'template_33ycncq', e.target, 'rEAdyNUwtD3tW3eow')
             .then((result) => {
-                console.log(result.text);
+                push('<Success />);
             }, (error) => {
                 console.log(error.text);
             });
