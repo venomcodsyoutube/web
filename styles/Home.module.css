@@ -105,6 +105,22 @@
   }
 }
 
+@media (max-width: 840px) {
+  .vid {
+    width: 750px;
+  }
+}
+@media (max-width: 600px) {
+  .vid {
+    width: 600px;
+  }
+}
+@media (max-width: 480px) {
+  .vid {
+    width: 300px;
+  }
+}
+
 @media (max-width: 1150px) {
   .coninfo {
     margin-top: -9rem;
@@ -138,6 +154,9 @@
   }
   .form {
     width: 16rem;
+  }
+    .vid {
+    width: 500px;
   }
 }
 
