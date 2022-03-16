@@ -62,15 +62,15 @@ const Jarvis = () => {
                                 <br />
                                 <br />
 
-                                print("Initializing Jarvis")
+                                print(&quot;Initializing Jarvis&quot;)
                                 <br />
                                 <br />
 
-                                engine = pyttsx3.init("sapi5")
+                                engine = pyttsx3.init(&quot;sapi5&quot;)
                                 <br />
-                                voices = engine.getProperty("voices")
+                                voices = engine.getProperty(&quot;voices&quot;)
                                 <br />
-                                voices.setProperty("voices", voices.[0].id)
+                                voices.setProperty(&quot;voices&quot;, voices.[0].id)
                                 <br />
                                 <br />
                                 def speak(text):
@@ -80,7 +80,7 @@ const Jarvis = () => {
                                 &nbsp;&nbsp;engine.runandwait()
                                 <br />
                                 <br />
-                                speak("Hello World")
+                                speak(&quot;Hello World&quot;)
                             </Code>
                         </Box>
                     </TabPanel>
