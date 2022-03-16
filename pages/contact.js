@@ -6,24 +6,24 @@ import {
     FormHelperText,
 } from '@chakra-ui/react'
 import React from 'react'
-import emailjs from "emailjs-com"
+// import emailjs from "emailjs-com"
 import styles from '../styles/Home.module.css';
-import Success from './components/Success'
+// import Success from './components/Success'
 import Head from 'next/head'
 import { Button } from '@chakra-ui/button'
 
 const contact = () => {
-  const sendEmail = (e) => {
-        e.preventDefault();
+//   const sendEmail = (e) => {
+//         e.preventDefault();
 
-        emailjs.sendForm('service_e2dajuo', 'template_33ycncq', e.target, 'rEAdyNUwtD3tW3eow')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-            e.target.reset();
-    }
+//         emailjs.sendForm('service_e2dajuo', 'template_33ycncq', e.target, 'rEAdyNUwtD3tW3eow')
+//             .then((result) => {
+//                 console.log(result.text);
+//             }, (error) => {
+//                 console.log(error.text);
+//             });
+//             e.target.reset();
+//     }
 
     return (
         <VStack>
@@ -38,8 +38,8 @@ const contact = () => {
                 </Box>
 
                 <Box mt="-4rem">
-                    <form action="https://formspree.io/f/xoqrwggo"
-                        method="post" onSubmit={sendEmail} className={styles.form}>
+                    <form 
+                        method="post" className={styles.form}>
                         <FormControl isRequired >
                             <FormLabel htmlFor='name'>Name</FormLabel>
                             <Input name="name" id='name' placeholder='Name' />
