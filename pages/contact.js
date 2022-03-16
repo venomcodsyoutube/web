@@ -8,7 +8,7 @@ import {
 import React from 'react'
 import emailjs from "emailjs-com"
 import styles from '../styles/Home.module.css';
-// import Success from './components/Success'
+import Success from './components/Success'
 import Head from 'next/head'
 import { Button } from '@chakra-ui/button'
 
@@ -23,6 +23,9 @@ const contact = () => {
                 console.log(error.text);
             });
             e.target.reset();
+      return (
+          <Success />
+          )
     }
 
     return (
