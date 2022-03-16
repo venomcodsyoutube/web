@@ -7,6 +7,7 @@ import Header from './components/Header'
 export default function Home() {
   return (
     <VStack>
+    <Head><title>VenomCodes | Home</title></Head>
         <Header />
     </VStack>
   )
