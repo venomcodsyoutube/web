@@ -19,7 +19,7 @@ const courses = () => {
                     <Badge colorScheme="purple" ml='7rem' mr="7rem" mb="1rem">VenomCodes</Badge>
                     <Heading textAlign="center" size="md">Creating Jarvis from scratch!!</Heading>
                     <Text textAlign="center" mt={2}>In this course, we will create an AI assistant with the help of Python..</Text>
-                    <Link href="./coursepages/create-jarvis-from-scratch" passHref ><Button colorScheme="purple" mt={4}>Start Watching</Button></Link>
+                    <Link href="./coursepages/creating-jarvis-from-scratch" passHref ><Button colorScheme="purple" mt={4}>Start Watching</Button></Link>
                 </div>
             </div>
         </Box>
