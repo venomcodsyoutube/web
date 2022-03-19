@@ -98,6 +98,16 @@
   margin-left: auto;
 }
 
+.modal ul {
+  display: flex;
+}
+
+.modal ul li {
+  margin-bottom:auto;
+  list-style: none;
+  padding: 1rem;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
