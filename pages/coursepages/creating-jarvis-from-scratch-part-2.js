@@ -1,6 +1,6 @@
 import React from 'react';
 import { VStack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react';
-
+import {Button} from "@chakra-ui/button"
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 import {
   Table,
@@ -109,7 +109,7 @@ const Jarvis = () => {
                                 speak(&quot;Hello World&quot;)
                             </Code>
                         </Box>
-                        <button onClick={download()}>Download Pyaudio File</button>
+                        <Button onclick={download()}>Download Pyaudio File</Button>
                     </TabPanel>
                     <TabPanel>
                          <Table variant='simple'>
