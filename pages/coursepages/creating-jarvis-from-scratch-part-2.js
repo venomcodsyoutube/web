@@ -35,7 +35,7 @@ const Jarvis = () => {
                     <TabPanel>
                         <Heading>Creating Jarvis from scratch (Part 2)!!</Heading>
                         <Text mt="2rem" fontSize="1.5rem" >Creating the Wish function</Text>
-                        <Text mt="1rem">This wish function will use the speak function created in the last part, to wish us according to the time. For example, if it is 10 AM, then it will wisth us `Good Morning` and so on.</Text>
+                        <Text mt="1rem">This wish function will use the speak function created in the last part, to wish us according to the time. For example, if it is 10 AM, then it will wish us `Good Morning` and so on.</Text>
                         <Text>So first in the function, we will define what hour is by typing : <b> hour = int(datetime.datetime.now().hour) </b>. Then we will set the time for each wish as shown below -</Text>
                         <Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/e422e16c62f84f91fbbafeb37ed67b7a/d7e9ae1c1b58a799-10/s640x960/9e163dfd25b4c615d165b8872f81f05470265355.png" width="450" height="350" />
                         <Text mt="2rem" fontSize="1.5rem">Creating the takeCommand function</Text>
@@ -43,7 +43,7 @@ const Jarvis = () => {
                         <Text mt="1rem">For this we will use the speech recognition package that we installed in the previous part, to recoginze tha command comming from the source , which is the microphone. This is how it is done - </Text>
                         <Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/e67c36b40775ad8d5f16e8c82e8a6429/65239f0dfbd3ccbc-12/s640x960/87eae736b42d0f88f16db793857c02e2af71bbae.png" width="450" height="350" />
                             <Text mt="1rem">Also to make these function work, we will have to called them out in a if loop, like this -</Text>
-<Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/b85eeb33ede4c97a3ac130fbea091612/b7fef1fbaf46745f-5f/s400x600/e1e89feeee7f73c5561e6672cfea86ec455c2e33.png" width="450" height="350" />
+<Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/b85eeb33ede4c97a3ac130fbea091612/b7fef1fbaf46745f-5f/s400x600/e1e89feeee7f73c5561e6672cfea86ec455c2e33.png" width="250" height="150" />
                     </TabPanel>
                     <TabPanel>
                         <Heading>Source Code</Heading>
@@ -84,6 +84,51 @@ const Jarvis = () => {
                                 <br />
                                 <br />
                                 speak(&quot;Hello World&quot;)
+                                <br/>
+                                <br/>
+                                  def wish():
+                                  <br/>
+                                    &nbsp;&nbsp;hour = int(datetime.datetime.now().hour)
+                                  <br/>
+                                    &nbsp;&nbsp;if hour>=0 and hour<12:<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Good Morning!&quot;)<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Good Morning!&quot;)<br/><br/>
+                                  
+                                    &nbsp;&nbsp;elif hour>=12 and hour<18:<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Good Afternoon!&quot;)<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Good Afternoon!&quot;)<br/><br/>
+
+                                    &nbsp;&nbsp;else:<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Good Evening!&quot;) <br/>  
+                                        &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Good Evening!&quot;)  <br/><br/>
+
+                                    &nbsp;&nbsp;print(&quot;I am Jarvis. Please tell me how may I help you&quot;)   <br/>    
+                                    &nbsp;&nbsp;speak(&quot;I am Jarvis. Please tell me how may I help you&quot;)<br/><br/>
+                                      
+                                def takeCommand(): <br/> 
+                                # Uses device microphone to take the command <br/> 
+                                    &nbsp;&nbsp;r = sr.Recognizer() <br/> 
+                                    &nbsp;&nbsp;with sr.Microphone()as source: <br/> 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Listening..&quot;) <br/> 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Listening..&quot;) <br/> 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;r.pause_threshold = 1 <br/> 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;audio = r.listen(source) <br/> 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try: <br/> 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Recognizing...&quot;)   <br/> 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Recognizing...&quot;) <br/>   
+                                        &nbsp;&nbsp;&nbsp;&nbsp;query = r.recognize_google(audio, language=&quot;en-in&quot;) <br/> 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;print(f&quot;User said: {query}&quot;) <br/>  <br/> 
+
+                                    &nbsp;&nbsp;&nbsp;&nbsp;except Exception as e:   <br/>
+                                        &nbsp;&nbsp;print(&quot;Say that again please...&quot;)   <br/>   
+                                        &nbsp;&nbsp;speak(&quot;Say that again please...&quot;)   <br/> 
+                                        &nbsp;&nbsp;return "None" <br/>
+                                    &nbsp;&nbsp;query = query.lower()<br/>
+                                    &nbsp;&nbsp;return query<br/><br/>
+
+                            if __name__ == &quot;__main__&quot;:<br/>
+                                &nbsp;&nbsp;wish()<br/>
+                                &nbsp;&nbsp;takeCommand()<br/>
                             </Code>
                         </Box>
                     </TabPanel>
