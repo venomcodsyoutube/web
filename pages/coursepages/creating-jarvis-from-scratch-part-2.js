@@ -94,7 +94,7 @@ const Jarvis = () => {
                                         &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Good Morning!&quot;)<br/>
                                         &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Good Morning!&quot;)<br/><br/>
                                   
-                                    &nbsp;&nbsp;elif hour>=12 and hour<18:<br/>
+                                    &nbsp;&nbsp;elif hour>=12 and hour	&lt;18:<br/>
                                         &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Good Afternoon!&quot;)<br/>
                                         &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Good Afternoon!&quot;)<br/><br/>
 
