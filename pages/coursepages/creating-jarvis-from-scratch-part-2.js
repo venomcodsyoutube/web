@@ -1,5 +1,6 @@
 import React from 'react';
 import { VStack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react';
+import {Button} from "@chakra-ui/button"
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 import {
   Table,
