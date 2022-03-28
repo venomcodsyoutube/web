@@ -18,7 +18,7 @@ import Link from 'next/link'
 import axios from "axios"
 
 const Jarvis = () => {
-  const download() {
+  function download() {
     axios({
       url: "https://drive.google.com/file/d/1n8jZLFngzlVD2CuFWp78KUKZB4SX0kYD/view?usp=sharing",
       method: "GET",
