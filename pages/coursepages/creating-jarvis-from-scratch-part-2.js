@@ -116,13 +116,15 @@ const Jarvis = () => {
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try: <br/> 
                                         &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Recognizing...&quot;)   <br/> 
                                         &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Recognizing...&quot;) <br/>   
-                                        &nbsp;&nbsp;&nbsp;&nbsp;query = r.recognize_google(audio, language=&quot;en-in&quot;) <br/> 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;query = r.recognize_google(audio, language=&quot;en-in&quot;) <br/>
+                                        &nbsp;&nbsp; &nbsp;&nbsp;query = query.lower()<br/>
                                         &nbsp;&nbsp;&nbsp;&nbsp;print(f&quot;User said: {query}&quot;) <br/>  <br/> 
 
                                     &nbsp;&nbsp;&nbsp;&nbsp;except Exception as e:   <br/>
                                         &nbsp;&nbsp;print(&quot;Say that again please...&quot;)   <br/>   
                                         &nbsp;&nbsp;speak(&quot;Say that again please...&quot;)   <br/> 
                                         &nbsp;&nbsp;return &quot;None&quot; <br/>
+                                        &nbsp;&nbsp;return query
 
                             if __name__ == &quot;__main__&quot;:<br/>
                                 &nbsp;&nbsp;wish()<br/>
