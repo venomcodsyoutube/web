@@ -1,6 +1,16 @@
 import React from 'react';
 import { VStack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+} from '@chakra-ui/react'
 import styles from '../../styles/Home.module.css'
 import Head from 'next/head'
 import { Code } from '@chakra-ui/react'
@@ -17,7 +27,7 @@ const Jarvis = () => {
                 <TabList>
                     <Tab>Overview</Tab>
                     <Tab>Source Code</Tab>
-                    <Tab isDisabled>Parts</Tab>
+                    <Tab>Parts</Tab>
                 </TabList>
 
                 <TabPanels>
@@ -83,6 +93,25 @@ const Jarvis = () => {
                                 speak(&quot;Hello World&quot;)
                             </Code>
                         </Box>
+                    </TabPanel>
+                    <TabPanel>
+                         <Table variant='simple'>
+                          <Thead>
+                            <Tr>
+                              <Th>Part</Th>
+                            </Tr>
+                          </Thead>
+                          <Tbody>
+                            <Tr>
+                              <Td>inches</Td>
+                              <Td>millimetres (mm)</Td>
+                            </Tr>
+                            <Tr>
+                              <Td>feet</Td>
+                              <Td>centimetres (cm)</Td>
+                              <Td isNumeric>30.48</Td>
+                            </Tr>
+                        </Table>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
