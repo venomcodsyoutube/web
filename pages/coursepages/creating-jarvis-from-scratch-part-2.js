@@ -1,9 +1,20 @@
 import React from 'react';
 import { VStack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+} from '@chakra-ui/react'
 import styles from '../../styles/Home.module.css'
 import Head from 'next/head'
 import { Code } from '@chakra-ui/react'
+import Link from 'next/link'
 
 const Jarvis = () => {
     return (
@@ -17,33 +28,25 @@ const Jarvis = () => {
                 <TabList>
                     <Tab>Overview</Tab>
                     <Tab>Source Code</Tab>
-                    <Tab isDisabled>Parts</Tab>
+                    <Tab>Parts</Tab>
                 </TabList>
 
                 <TabPanels>
                     <TabPanel>
                         <Heading>Creating Jarvis from scratch (Part 2)!!</Heading>
-                        <Text mt="2rem" fontSize="1.5rem" >Installation</Text>
-                        <ul className={styles.infolist}>
-                            <li><b>Install Pyttsx3</b> : You can install Pyttsx3 by clicking <a href="https://pypi.org/project/pyttsx3/">here</a> and coping the command and pasting it in the terminal or by typing <b>`pip  install Pyttsx3`</b> in the terminal. </li><br />
-                            <li><b>Install SpeechRecognition</b> : You can install SpeechRecognition by clicking <a href="https://pypi.org/project/speechrecognition/">here</a> and coping the command and pasting it in the terminal or by typing <b>`pip  install SpeechRecognition`</b> in the terminal.</li><br />
-                            <li><b>Install Wikipedia</b> : You can install Wikipedia by clicking <a href="https://pypi.org/project/wikipedia/">here</a> and coping the command and pasting it in the terminal or by typing <b>`pip  install wikipedia`</b> in the terminal.</li>
-                        </ul>
-                        <Text mt="2rem" fontSize="1.5rem">Importing  the modules</Text>
-                        <Text mt="1rem">Now after installing the necessary modules, we will import it in the python file that we have created. Import the modules installed and import <b>`datetime`, `os`, `webbrowser` and `smtplib`</b> as shown below-</Text>
-                        <Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/d2b09212aaab1b8b8c6af435e37aa407/9ea9178e80943b18-1e/s400x600/b84d8470ab77ad739e849d9288c9f7661ac6e4ac.png" width="450" height="350" />
-                        <Text>Now after importing, we will add a print function that will print <b>Initializing Jarvis.</b> And after that, if you run the program you should get an output as shown below -</Text>
-                        <Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/64fef6ae74994d966a9c26c59a6d6aac/4cbbf121844521e0-97/s500x750/14213bfef94286b652ef425429e49210283b6ea5.png" width="450" height="350" />
-                        <Text mt="2rem" fontSize="1.5rem">Defining the engine</Text>
-                        <Text mt="1rem">After that we will define an engine which will come from pyttsx3 and type <b>sapi5</b> in the parenthesis. Then we will also define voice which will select a voice for the assistant , the code is as shown below -</Text>
-                        <Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/1986896d129547f5f3dff6ce98228525/c486a7f249dad7d3-07/s400x600/92f31a9027aa5bd665385cef680fc421e75646d1.png" width="450" height="200"/>
-                        <Text mt="2rem" fontSize="1.5rem">Defining the speech function</Text>
-                        <Text mt="1rem">Now we will define a function called speak and this function will pronounce anything that we give it as a text. then we will add <b>engine.say(text) and engine.runandwait()</b>. So it will run and then wait for the audio to pronounce. Now if you add a speak function saying <b>`Hello World`</b>, you will hear hello world from your device.</Text>
-                        <Text mt="2rem" fontSize="1.25rem" fontWeight="semibold">So that was it for the part 1 of this Jarvis course. More parts will be coming soon. Thank you for being with me and I will see you in the next part!!</Text>
+                        <Text mt="2rem" fontSize="1.5rem" >Creating the Wish function</Text>
+                        <Text mt="1rem">This wish function will use the speak function created in the last part, to wish us according to the time. For example, if it is 10 AM, then it will wisth us `Good Morning` and so on.</Text>
+                        <Text>So first in the function, we will define what hour is by typing : <b> hour = int(datetime.datetime.now().hour) </b>. Then we will set the time for each wish as shown below -</Text>
+                        <Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/e422e16c62f84f91fbbafeb37ed67b7a/d7e9ae1c1b58a799-10/s640x960/9e163dfd25b4c615d165b8872f81f05470265355.png" width="450" height="350" />
+                        <Text mt="2rem" fontSize="1.5rem">Creating the takeCommand function</Text>
+                        <Text mt="1rem">What this function will do is that it will take commands from you using the microphone in your device and give an output based on the command.</Text>
+                        <Text mt="1rem">For this we will use the speech recognition package that we installed in the previous part, to recoginze tha command comming from the source , which is the microphone. This is how it is done - </Text>
+                        <Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/e67c36b40775ad8d5f16e8c82e8a6429/65239f0dfbd3ccbc-12/s640x960/87eae736b42d0f88f16db793857c02e2af71bbae.png" width="450" height="350" />
+                            <Text mt="1rem">Also to make these function work, we will have to called them out in a if loop, like this -</Text>
+<Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/b85eeb33ede4c97a3ac130fbea091612/b7fef1fbaf46745f-5f/s400x600/e1e89feeee7f73c5561e6672cfea86ec455c2e33.png" width="450" height="350" />
                     </TabPanel>
                     <TabPanel>
                         <Heading>Source Code</Heading>
-                        <Text mt="1rem" fontSize="1rem" color="red" fontWeight="bold">* Note : This source code will be editted as we go on with this course.  </Text>
                         <Box mt="1rem">
                             <Code p="4">
                                 import pyttsx3
@@ -83,6 +86,26 @@ const Jarvis = () => {
                                 speak(&quot;Hello World&quot;)
                             </Code>
                         </Box>
+                    </TabPanel>
+                    <TabPanel>
+                         <Table variant='simple'>
+                          <Thead>
+                            <Tr>
+                              <Th>Part</Th>
+                              <Th>Link</Th>
+                            </Tr>
+                          </Thead>
+                          <Tbody>
+                            <Tr>
+                              <Td>Part 1</Td>
+                              <Td><Link href="/coursepages/creating-jarvis-from-scratch">Click Here</Link></Td>
+                            </Tr>
+                            <Tr>
+                              <Td>Part 2</Td>
+                              <Td><Link href="/coursepages/creating-jarvis-from-scratch-part-2">Click Here</Link></Td>
+                            </Tr>
+                          </Tbody>
+                        </Table>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
