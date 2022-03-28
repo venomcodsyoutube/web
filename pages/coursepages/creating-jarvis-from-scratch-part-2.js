@@ -90,6 +90,7 @@ const Jarvis = () => {
                             </Code>
                         </Box>
                         <a href="../PyAudio-0.2.11-cp310-cp310-win_amd64.whl" download><Button mt="1rem">Download Pyaudio File</Button></a>
+                          <Text mt="1rem" textColor="red">* This file is just for Python version 3.10 and 64bit. To get for other versions <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio" textColor="blue">Click here</a></Text>
                     </TabPanel>
                     <TabPanel>
                          <Table variant='simple'>
