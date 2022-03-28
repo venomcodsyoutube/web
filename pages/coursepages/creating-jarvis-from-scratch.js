@@ -106,11 +106,11 @@ const Jarvis = () => {
                           <Tbody>
                             <Tr>
                               <Td>Part 1</Td>
-                              <Td>Part 2</Td>
+                              <Td><Link href="./courses/creating-jarvis-from-sratch.js">Click Here</Link></Td>
                             </Tr>
                             <Tr>
-                              <Td><Link href="/courses/creating-jarvis-from-sratch.js">Click Here</Link></Td>
-                              <Td><Link href="/courses/creating-jarvis-from-sratch-part-2.js">Click Here</Link></Td>
+                              <Td>Part 2</Td>
+                              <Td><Link href="./courses/creating-jarvis-from-sratch-part-2.js">Click Here</Link></Td>
                             </Tr>
                           </Tbody>
                         </Table>
