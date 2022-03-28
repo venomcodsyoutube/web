@@ -54,7 +54,6 @@ const Jarvis = () => {
                     </TabPanel>
                     <TabPanel>
                         <Heading>Source Code</Heading>
-                        <Text mt="1rem" fontSize="1rem" color="red" fontWeight="bold">* Note : This source code will be editted as we go on with this course.  </Text>
                         <Box mt="1rem">
                             <Code p="4">
                                 import pyttsx3
