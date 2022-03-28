@@ -90,11 +90,11 @@ const Jarvis = () => {
                                   <br/>
                                     &nbsp;&nbsp;hour = int(datetime.datetime.now().hour)
                                   <br/>
-                                    &nbsp;&nbsp;if hour>=0 and hour&lt;12:<br/>
+                                    &nbsp;&nbsp;if hour&gt;=0 and hour&lt;12:<br/>
                                         &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Good Morning!&quot;)<br/>
                                         &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Good Morning!&quot;)<br/><br/>
                                   
-                                    &nbsp;&nbsp;elif hour>=12 and hour	&lt;18:<br/>
+                                    &nbsp;&nbsp;elif hour&gt;=12 and hour	&lt;18:<br/>
                                         &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Good Afternoon!&quot;)<br/>
                                         &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Good Afternoon!&quot;)<br/><br/>
 
@@ -122,7 +122,7 @@ const Jarvis = () => {
                                     &nbsp;&nbsp;&nbsp;&nbsp;except Exception as e:   <br/>
                                         &nbsp;&nbsp;print(&quot;Say that again please...&quot;)   <br/>   
                                         &nbsp;&nbsp;speak(&quot;Say that again please...&quot;)   <br/> 
-                                        &nbsp;&nbsp;return "None" <br/>
+                                        &nbsp;&nbsp;return &quot;None&quot; <br/>
                                     &nbsp;&nbsp;query = query.lower()<br/>
                                     &nbsp;&nbsp;return query<br/><br/>
 
