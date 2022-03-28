@@ -90,7 +90,7 @@ const Jarvis = () => {
                                   <br/>
                                     &nbsp;&nbsp;hour = int(datetime.datetime.now().hour)
                                   <br/>
-                                    &nbsp;&nbsp;if hour>=0 and hour<12:<br/>
+                                    &nbsp;&nbsp;if hour>=0 and hour&lt;12:<br/>
                                         &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Good Morning!&quot;)<br/>
                                         &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Good Morning!&quot;)<br/><br/>
                                   
