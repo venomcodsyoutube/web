@@ -106,11 +106,11 @@ const Jarvis = () => {
                           <Tbody>
                             <Tr>
                               <Td>Part 1</Td>
-                              <Td><Link href="./creating-jarvis-from-scratch.js">Click Here</Link></Td>
+                              <Td><Link href="/creating-jarvis-from-scratch.js">Click Here</Link></Td>
                             </Tr>
                             <Tr>
                               <Td>Part 2</Td>
-                              <Td><Link href="./creating-jarvis-from-scratch-part-2.js">Click Here</Link></Td>
+                              <Td><Link href="/creating-jarvis-from-scratch-part-2.js">Click Here</Link></Td>
                             </Tr>
                           </Tbody>
                         </Table>
