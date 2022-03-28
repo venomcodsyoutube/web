@@ -14,6 +14,7 @@ import {
 import styles from '../../styles/Home.module.css'
 import Head from 'next/head'
 import { Code } from '@chakra-ui/react'
+import Link from 'next/link'
 
 const Jarvis = () => {
     return (
@@ -99,17 +100,17 @@ const Jarvis = () => {
                           <Thead>
                             <Tr>
                               <Th>Part</Th>
+                              <Th>Link</Th>
                             </Tr>
                           </Thead>
                           <Tbody>
                             <Tr>
-                              <Td>inches</Td>
-                              <Td>millimetres (mm)</Td>
+                              <Td>Part 1</Td>
+                              <Td>Part 2</Td>
                             </Tr>
                             <Tr>
-                              <Td>feet</Td>
-                              <Td>centimetres (cm)</Td>
-                              <Td isNumeric>30.48</Td>
+                              <Td><Link href="/courses/creating-jarvis-from-sratch.js">Click Here</Link></Td>
+                              <Td><Link href="/courses/creating-jarvis-from-sratch-part-2.js">Click Here</Link></Td>
                             </Tr>
                           </Tbody>
                         </Table>
