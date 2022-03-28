@@ -49,7 +49,6 @@ const Jarvis = () => {
                         <Heading>Source Code</Heading>
                         <Text textColor="red">* Couldnt Update Source Code</Text>
                         <Box mt="1rem">
-                  <Box mt="1rem">
                             <Code p="4">
                                 import pyttsx3
                                 <br />
