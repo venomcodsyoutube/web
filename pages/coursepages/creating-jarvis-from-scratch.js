@@ -111,6 +111,7 @@ const Jarvis = () => {
                               <Td>centimetres (cm)</Td>
                               <Td isNumeric>30.48</Td>
                             </Tr>
+                          </Tbody>
                         </Table>
                     </TabPanel>
                 </TabPanels>
