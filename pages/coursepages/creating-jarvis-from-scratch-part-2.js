@@ -19,26 +19,6 @@ import Link from 'next/link'
 import axios from "axios"
 
 const Jarvis = () => {
-  function download() {
-    axios({
-      url: "https://drive.google.com/file/d/1n8jZLFngzlVD2CuFWp78KUKZB4SX0kYD/view?usp=sharing",
-      method: "GET",
-      responseType: "blob"
-    })
-    .then((response) => {
-          const url = window.URL.createObjectURL(new Blob([response.data]))
-    
-          const link = document.createElement('a')
-          
-          link.href = link
-          
-          link.setAttribute('download', 'PyAudio-0.2.11-cp310-cp310-win_amd64.whl')
-    
-          document.bosy.appendChild(link)
-    
-          link.click()
-     })
-  }
     return (
         <VStack>
             <Head><title>VenomCodes | Creating Jarvis </title></Head>
@@ -109,7 +89,7 @@ const Jarvis = () => {
                                 speak(&quot;Hello World&quot;)
                             </Code>
                         </Box>
-                        <Button onclick={download()}>Download Pyaudio File</Button>
+                        <a href="https://drive.google.com/file/d/1n8jZLFngzlVD2CuFWp78KUKZB4SX0kYD/view?usp=sharing" download><Button>Download Pyaudio File</Button></a>
                     </TabPanel>
                     <TabPanel>
                          <Table variant='simple'>
