@@ -123,8 +123,6 @@ const Jarvis = () => {
                                         &nbsp;&nbsp;print(&quot;Say that again please...&quot;)   <br/>   
                                         &nbsp;&nbsp;speak(&quot;Say that again please...&quot;)   <br/> 
                                         &nbsp;&nbsp;return &quot;None&quot; <br/>
-//                                     &nbsp;&nbsp;<Text>query = query.lower()</Text><br/>
-//                                     &nbsp;&nbsp;<Text>return query</Text><br/><br/>
 
                             if __name__ == &quot;__main__&quot;:<br/>
                                 &nbsp;&nbsp;wish()<br/>
