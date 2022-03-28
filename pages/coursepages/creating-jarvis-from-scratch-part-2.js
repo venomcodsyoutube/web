@@ -89,7 +89,7 @@ const Jarvis = () => {
                                 speak(&quot;Hello World&quot;)
                             </Code>
                         </Box>
-                        <a href="../PyAudio-0.2.11-cp310-cp310-win_amd64.whl" download><Button>Download Pyaudio File</Button></a>
+                        <a href="../PyAudio-0.2.11-cp310-cp310-win_amd64.whl" download><Button mt="1rem">Download Pyaudio File</Button></a>
                     </TabPanel>
                     <TabPanel>
                          <Table variant='simple'>
