@@ -47,7 +47,9 @@ const Jarvis = () => {
                     </TabPanel>
                     <TabPanel>
                         <Heading>Source Code</Heading>
+                        <Text textColor="red">* Couldnt Update Source Code</Text>
                         <Box mt="1rem">
+                  <Box mt="1rem">
                             <Code p="4">
                                 import pyttsx3
                                 <br />
@@ -84,51 +86,6 @@ const Jarvis = () => {
                                 <br />
                                 <br />
                                 speak(&quot;Hello World&quot;)
-                                <br/>
-                                <br/>
-                                  def wish():
-                                  <br/>
-                                    &nbsp;&nbsp;hour = int(datetime.datetime.now().hour)
-                                  <br/>
-                                    &nbsp;&nbsp;if hour&gt;=0 and hour&lt;12:<br/>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Good Morning!&quot;)<br/>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Good Morning!&quot;)<br/><br/>
-                                  
-                                    &nbsp;&nbsp;elif hour&gt;=12 and hour	&lt;18:<br/>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Good Afternoon!&quot;)<br/>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Good Afternoon!&quot;)<br/><br/>
-
-                                    &nbsp;&nbsp;else:<br/>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Good Evening!&quot;) <br/>  
-                                        &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Good Evening!&quot;)  <br/><br/>
-
-                                    &nbsp;&nbsp;print(&quot;I am Jarvis. Please tell me how may I help you&quot;)   <br/>    
-                                    &nbsp;&nbsp;speak(&quot;I am Jarvis. Please tell me how may I help you&quot;)<br/><br/>
-                                      
-                                def takeCommand(): <br/> 
-                                # Uses device microphone to take the command <br/> 
-                                    &nbsp;&nbsp;r = sr.Recognizer() <br/> 
-                                    &nbsp;&nbsp;with sr.Microphone()as source: <br/> 
-                                        &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Listening..&quot;) <br/> 
-                                        &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Listening..&quot;) <br/> 
-                                        &nbsp;&nbsp;&nbsp;&nbsp;r.pause_threshold = 1 <br/> 
-                                        &nbsp;&nbsp;&nbsp;&nbsp;audio = r.listen(source) <br/> 
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try: <br/> 
-                                        &nbsp;&nbsp;&nbsp;&nbsp;print(&quot;Recognizing...&quot;)   <br/> 
-                                        &nbsp;&nbsp;&nbsp;&nbsp;speak(&quot;Recognizing...&quot;) <br/>   
-                                        &nbsp;&nbsp;&nbsp;&nbsp;query = r.recognize_google(audio, language=&quot;en-in&quot;) <br/>
-                                        &nbsp;&nbsp; &nbsp;&nbsp;query = query.lower()<br/>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;print(f&quot;User said: {query}&quot;) <br/>  <br/> 
-
-                                    &nbsp;&nbsp;&nbsp;&nbsp;except Exception as e:   <br/>
-                                        &nbsp;&nbsp;print(&quot;Say that again please...&quot;)   <br/>   
-                                        &nbsp;&nbsp;speak(&quot;Say that again please...&quot;)   <br/> 
-                                        &nbsp;&nbsp;return &quot;None&quot; <br/>
-                                        &nbsp;&nbsp;return query
-
-                            if __name__ == &quot;__main__&quot;:<br/>
-                                &nbsp;&nbsp;wish()<br/>
-                                &nbsp;&nbsp;takeCommand()<br/>
                             </Code>
                         </Box>
                     </TabPanel>
