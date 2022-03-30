@@ -45,7 +45,8 @@ const Jarvis = () => {
                         <Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/e67c36b40775ad8d5f16e8c82e8a6429/65239f0dfbd3ccbc-12/s640x960/87eae736b42d0f88f16db793857c02e2af71bbae.png" width="450" height="350" />
                             <Text mt="1rem">Also to make these function work, we will have to called them out in a if loop, like this -</Text>
 <Image alt="image" className={styles.infoImg} src="https://64.media.tumblr.com/b85eeb33ede4c97a3ac130fbea091612/b7fef1fbaf46745f-5f/s400x600/e1e89feeee7f73c5561e6672cfea86ec455c2e33.png" width="250" height="150" />
-                    </TabPanel>
+                    <Text mt="2rem" fontSize="1.25rem" fontWeight="semibold">So that was it for the part 2 of this Jarvis course. More parts will be coming soon. Thank you for being with me and I will see you in the next part!!</Text>
+  </TabPanel>
                     <TabPanel>
                         <Heading>Source Code</Heading>
                         <Text textColor="red">* Couldnt Update Source Code</Text>
