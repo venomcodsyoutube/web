@@ -23,8 +23,7 @@ const Jarvis = () => {
         <VStack>
             <Head><title>VenomCodes | Creating Jarvis </title></Head>
             <Flex>
-                <iframe className={styles.vid} width="840" height="480" src="https://www.youtube.com/embed/UMwD7l0-BJk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-
+                <iframe className={styles.vid} width="840" height="480" src="https://www.youtube.com/embed/3tExWY-UtSk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </Flex>
             <Tabs w="94%" p="2">
                 <TabList>
