@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
       <Head>
-    <link rel="./components/CHANNEL LOGO.png" type="icon" />
+    <link href="./components/CHANNEL LOGO.png" type="icon" />
     </Head>
       <ColorModeScript initialColorMode='light'></ColorModeScript>
       <Navbar />
